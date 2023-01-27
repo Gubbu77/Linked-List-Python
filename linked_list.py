@@ -183,6 +183,7 @@ ll.remove_by_value("banana")
 ll.remove_by_value("mango")
 ll.remove_by_value("apple")
 ll.remove_by_value("grapes")
+l1.remove_by_value("papaya")
 ll.print()
 
 ll.insert_values([45,7,12,567,99])
