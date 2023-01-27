@@ -173,6 +173,7 @@ ll = LinkedList()
 ll.insert_values(["banana", "mango", "grapes", "orange"])
 ll.print()
 ll.insert_after_value("mango","apple")
+l1.insert_after_value("apple", "papaya")
 ll.print()
 ll.remove_by_value("orange")  # remove orange from linked list
 ll.print()
