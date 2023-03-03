@@ -3,8 +3,7 @@ class Node:
          self.data = data
          self.next = next
          self.prev = prev
-
-
+     
 class LinkedList:
     def __init__(self):
         self.head = None
@@ -13,7 +12,6 @@ class LinkedList:
         if self.head == None :
             node = Node(data, self.head, None)
             self.head = node
-
         else :
             node = Node(data, self.head, None)
             self.head.prev = node
@@ -22,10 +20,9 @@ class LinkedList:
     def print(self):
         if self.head is None:
             print("Linked List is empty")
-
         itr = self.head
         liststr = ''
-
+          
         while itr:
             liststr += str(itr.data) + "-->"
             itr = itr.next
@@ -53,19 +50,16 @@ class LinkedList:
         while itr:
             count += 1
             itr = itr.next
-
         return count
-
 
     def remove_element(self, index):
         if index < 0 or index >= self.get_lenght():
             raise Exception("Invaid Index")
-
         if index == 0:
             self.head = self.head.next
             self.head.prev = None
             return
-
+          
         count = 0
         itr = self.head
         while itr:
@@ -80,7 +74,6 @@ class LinkedList:
     def insert_at(self, index, data):
         if index < 0 or index >= self.get_lenght():
             raise Exception("Invaid Index")
-
         if index == 0:
             self.insert_at_begining()
             return
@@ -101,7 +94,6 @@ class LinkedList:
     def insert_after_value(self, data_after, data_to_insert):
         if self.head is None:
             return
-
         if self.head.data == data_after:
             self.head.next = Node(data_to_insert, self.head.next)
 
@@ -110,14 +102,11 @@ class LinkedList:
             if itr.data == data_after:
                 itr.next = Node(data_to_insert, itr.next)
                 break
-
             itr = itr.next
-
 
     def remove_by_value(self, data):
         if self.head is None:
             return
-
         if self.head.data == data:
             self.head = self.head.next
             return
