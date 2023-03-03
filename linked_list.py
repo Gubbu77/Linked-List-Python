@@ -121,7 +121,6 @@ class LinkedList:
     def print_forward(self) :
         if self.head is None:
             return
-
         itr = self.head
         liststr = ''
         while  itr:
@@ -133,7 +132,6 @@ class LinkedList:
         if self.head is None:
             print("List is empty")
             return
-
         liststr = ''
         itr = self.head
         while itr:
@@ -154,10 +152,6 @@ class LinkedList:
             itr = itr.prev
         print(liststr)
 
-
-
-
-
 ll = LinkedList()
 ll.insert_values(["banana", "mango", "grapes", "orange"])
 ll.print()
@@ -174,7 +168,6 @@ ll.remove_by_value("apple")
 ll.remove_by_value("grapes")
 l1.remove_by_value("papaya")
 ll.print()
-
 ll.insert_values([45,7,12,567,99])
 ll.insert_at_end(67)
 ll.print()
